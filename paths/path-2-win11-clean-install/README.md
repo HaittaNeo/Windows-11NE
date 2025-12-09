@@ -16,7 +16,7 @@ Before continuing, make sure you have:
 - Read through this path once start to finish  
 
 ➡️ **Backup instructions:**  
-[How to Backup](../backup.md)
+[How to Backup](/backup.md)
 
 ---
 
