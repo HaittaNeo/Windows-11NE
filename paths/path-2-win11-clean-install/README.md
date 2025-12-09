@@ -47,11 +47,37 @@ This avoids being stranded offline after installation.
 
 ---
 
-### 1. Download the Windows 11NE ISO
+### 1. Making the Custom ISO
 
-Download **Windows 11NE (25H2)** — a debloated Windows 11 base designed for this guide.
+1. Download Windows 11 from the [Microsoft website](https://www.microsoft.com/software-download/windows11)
+2. Go to **Download Windows 11 Disk Image (ISO) for x64 devices**
+3. Select **Windows 11 Multi Edition** and click **Confirm**
+4. Select your language and click **Confirm**
+5. Click the **64 Bit Download** button
 
-➡️ *(Link to ISO will live here once final)*
+### 1.2 Microwin
+1. Open **PowerShell** or **Terminal** as Administrator  
+   - Right-click **Start** → **Windows Terminal (Admin)**
+
+2. Run this command:
+
+   ```powershell
+   irm "https://christitus.com/win" | iex
+   ```
+
+3. Click **MicroWin** at the top
+4. Your inital setup with look like this
+
+![microwin](microwin1.png)
+
+5. Click **Get Windows ISO**
+6. Select your downloaded ISO and after that your screen will change just copy my settings shown below (If you want to make a custom username and password you can do so now)
+
+![microwin](microwin2.png)
+
+7. Click **Start the Process** and name your custom ISO 
+
+Give it some time but after that is done and completed you can continue to step 2.
 
 ---
 
@@ -71,7 +97,8 @@ Download Rufus from the official site:
    - **Boot selection:** Windows 11NE ISO  
 3. Configure Rufus **exactly as shown below**
 
-📸 *(Rufus settings image goes here)*
+![Rufus configuration example](rufus1.png)
+![Rufus configuration example](rufus2.png)
 
 4. Click **Start**
 
@@ -93,7 +120,7 @@ Once the USB is ready, choose **one** of the following methods:
 Restart your system and press your boot menu key:
 
 Common keys:
-- **F12** – Dell / Lenovo
+- **F12** – Custom / Dell / Lenovo
 - **F11** – MSI
 - **F8** – ASUS
 - **Esc** – HP
@@ -124,11 +151,16 @@ Follow the installer prompts as shown in the images below.
 - Select **Install Windows 11**
 - Check ✅ **I agree that everything will be deleted (files, apps, and settings)**
 
+![Windows steps](1.png)
+
 ### Product Key
 - When prompted, click:
   **I don’t have a product key**
 
 Windows should activate automatically later.
+
+![Windows steps](2.png)
+![Windows steps](3.png)
 
 ---
 
@@ -159,6 +191,8 @@ These partitions will all belong to the same disk
 ✅ When only unallocated space remains on the target disk:
 - Select it
 - Click **Next**
+
+![Windows steps](4.png)
 
 ⚠️ **Do NOT delete partitions on other disks unless you intend to wipe them.**
 
@@ -192,30 +226,108 @@ Once on the desktop:
 
 ## Step 7 – Proceed With Post-Install Setup
 
-At this point, your system is ready to be configured properly.
+### 7.1 GPU Drivers
 
-➡️ Continue with:
-- **Windows Update**
-- **Driver installation**
-- **System verification**
+#### Identify Your GPU
 
-Follow the same instructions used in **Path 1** for:
-- Updates
-- DISM / SFC
-- Driver order
-- WinUtil & O&O configuration
+1. Right-click **Start** → **Device Manager** or use **WINDOWS KEY** and **X**
+2. Expand **Display adapters**
+3. Note the GPU name:
+   - NVIDIA
+   - AMD
+   - Intel
 
-➡️ [Continue with Path-1 Post-Install Steps](../path-1-win11-no-reinstall/README.md)
+#### Get the Correct Driver
+
+**Laptop or prebuilt desktop**
+- Go to the manufacturer’s support page (Dell, ASUS, Lenovo, etc.)
+- Search your **exact model**
+- Download the latest **Windows 11 graphics driver**
+
+**Custom-built desktop**
+- NVIDIA → Official NVIDIA driver download page
+- AMD → Radeon driver download page
+- Intel → Arc / iGPU driver download page
+
+Install the driver you downloaded and **reboot**.
+
+⚠️ If installing NVIDIA make sure to use the custom install and make sure to select the clean install option. 
+
+---
+
+### 7.2 Chipset / Motherboard Drivers
+
+**For desktops**
+1. Go to your motherboard vendor’s support page (ASUS, MSI, Gigabyte, etc.)
+2. Download and install:
+   - Chipset drivers
+   - ME / AM4 / AM5 / Intel Platform drivers (if offered)
+
+**For laptops**
+- Use the OEM support page
+- Install chipset / platform drivers listed for your model
+
+---
+
+### 7.3 Audio & Capture Card Drivers
+
+Install or update drivers from:
+- Your **audio interface** or **sound card** vendor
+- Your **USB microphone** vendor (if it uses a driver)
+- Your **capture card** vendor (Elgato, AverMedia, etc.)
+
+Reboot after installing drivers.
+
+---
+
+## Why We Do This (Drivers)
+
+- Windows Update often installs **generic drivers** that technically work but perform poorly
+
+Known-good vendor drivers eliminate many:
+- Stutter issues
+- Random crashes
+- “OBS hates me today” problems
+
+---
+
+# Windows 11NE – WinUtil Tweaks Profile
+
+This section describes **exactly** how to run Chris Titus Tech’s WinUtil 
+
+Do **not** enable extra options beyond what’s listed here unless you know what you’re doing.
+
+---
+
+## 1. Launch WinUtil
+
+1. Open **PowerShell** or **Terminal** as Administrator  
+   - Right-click **Start** → **Windows Terminal (Admin)**
+
+2. Run this command:
+
+   ```powershell
+   irm "https://christitus.com/win" | iex
+   ```
+
+3. Click on the **Tweeks** tab and select standard and then make your's look how the image below does.
+
+![WinUtil Standard Creator Profile](tweaks.png)
+
+4. Click **Run Tweeks**
+5. Click **Run OO Shutup 10**
+6. Click **File** and **Import Profile**
+7. [Download ooshutup10.cfg](https://raw.githubusercontent.com/HaittaNeo/Windows-11NE/main/paths/path-1-win11-no-reinstall/ooshutup10.cfg)
+8. Import the downlooaded config file
+9. Restart computer after everything has been applied and done
 
 ---
 
 ## ✅ After Path 2
 
 You now have:
-- A clean Windows 11NE install
+- A clean and debloated Windows install
 - No legacy upgrade issues
 - Full control over drivers and configuration
-
-From here, Windows behaves predictably — which is the entire goal of this project.
 
 ⬅️ [Back to Main README](../../README.md)
