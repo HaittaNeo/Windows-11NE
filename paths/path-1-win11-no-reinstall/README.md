@@ -391,7 +391,7 @@ Do **not** enable extra options beyond what’s listed here unless you know what
 
 4. Click **Run Tweeks**
 5. Click **Run OO Shutup 10**
-6. [Download Presetup config](ooshutup10.cfg)
+6. [Download Presetup config](ooshutup10.cfg?raw=1)
 
 ---
 
