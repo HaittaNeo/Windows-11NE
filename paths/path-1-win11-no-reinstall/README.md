@@ -394,6 +394,9 @@ Do **not** enable extra options beyond what’s listed here unless you know what
 5. Click **Run OO Shutup 10**
 6. Click **File** and **Import Profile**
 7. [Download ooshutup10.cfg](https://raw.githubusercontent.com/HaittaNeo/Windows-11NE/refs/heads/main/paths/path-1-win11-no-reinstall/ooshutup10.cfg)
+
+<a id="raw-url" href="https://raw.githubusercontent.com/HaittaNeo/Windows-11NE/refs/heads/main/paths/path-1-win11-no-reinstall/ooshutup10.cfg">Download FILE</a>
+
 8. Import the downlooaded config file
 9. Restart computer after everything has been applied and done
 
