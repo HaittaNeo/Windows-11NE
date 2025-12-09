@@ -145,8 +145,6 @@ Select the USB device.
 
 Follow the installer prompts as shown in the images below.
 
-📸 *(Windows installer screenshots go here)*
-
 ### Setup Options
 - Select **Install Windows 11**
 - Check ✅ **I agree that everything will be deleted (files, apps, and settings)**
