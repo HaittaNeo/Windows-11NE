@@ -209,7 +209,7 @@ With this stripped-down build:
 - You may be prompted for a **username and password**, or  
 - A default account may be created  
 
-Either is fine — we’ll adjust later if needed.
+Either is fine we’ll adjust later if needed.
 
 ---
 
