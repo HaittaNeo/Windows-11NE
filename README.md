@@ -41,13 +41,6 @@ Instead of forcing one approach, this guide is broken into **clear pathways**.
 
 ---
 
-### 🔹 Path 3 – Windows 10 → Windows 11
-**You are currently running Windows 10 and planning to upgrade.**
-
-➡️ [Path 3 – Windows 10 → Windows 11](paths/path-3-win10-to-win11/README.md)
-
----
-
 ## Universal Rule – Backup First (No Exceptions)
 
 Every path in this guide begins with **backup steps**.
