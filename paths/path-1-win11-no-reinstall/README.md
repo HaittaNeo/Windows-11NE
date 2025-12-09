@@ -391,7 +391,7 @@ Do **not** enable extra options beyond what’s listed here unless you know what
 
 4. Click **Run Tweeks**
 5. Click **Run OO Shutup 10**
-6. ### ✅ O&O ShutUp10++ Import Profile
+6. Click **File** and **Import Profile**
 7. [Download ooshutup10.cfg](https://raw.githubusercontent.com/HaittaNeo/Windows-11NE/main/paths/path-1-win11-no-reinstall/ooshutup10.cfg)
 
 ---
