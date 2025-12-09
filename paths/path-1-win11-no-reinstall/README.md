@@ -129,6 +129,7 @@ We install drivers directly from trusted sources.
 - Intel → Arc / iGPU driver download page
 
 Install the driver you downloaded and **reboot**.
+
 ⚠️ If installing NVIDIA make sure to use the custom install and make sure to select the clean install option. 
 
 ---
@@ -393,8 +394,22 @@ Do **not** enable extra options beyond what’s listed here unless you know what
 5. Click **Run OO Shutup 10**
 6. Click **File** and **Import Profile**
 7. [Download ooshutup10.cfg](https://raw.githubusercontent.com/HaittaNeo/Windows-11NE/main/paths/path-1-win11-no-reinstall/ooshutup10.cfg)
+8. Import the downlooaded config file
+9. Restart computer after everything has been applied and done
 
 ---
+
+## ✅ You’re Done
+
+At this point, your system should be back online, stable, and running cleaner than before.
+
+If you’d like an extra layer of confidence, you may return to the top of this path and run **DISM** and **SFC** one more time to confirm system integrity. This is optional, but it’s a good final check after significant changes.
+
+If everything feels good you’re all set.
+
+If you notice issues:
+- Use your **system restore point** to roll back the changes, or  
+- Proceed to **Path 2** and follow the clean-install process for a fresh Windows 11 setup.
 
 ## Navigation
 
