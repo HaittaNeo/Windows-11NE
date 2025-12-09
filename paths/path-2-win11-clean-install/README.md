@@ -50,10 +50,6 @@ This avoids being stranded offline after installation.
 ### 1. Making the Custom ISO
 
 1. Download Windows 11 from the [Microsoft website](https://www.microsoft.com/software-download/windows11)
-<a href="https://www.microsoft.com/software-download/windows11" target="_blank" rel="noopener noreferrer">
-Download Windows 11 ISO
-</a>
-
 2. Go to **Download Windows 11 Disk Image (ISO) for x64 devices**
 3. Select **Windows 11 Multi Edition** and click **Confirm**
 4. Select your language and click **Confirm**
